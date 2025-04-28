@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Doors County – Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- HEADER + NAV -->
+  <header>
+    <div class="container">
+      <div class="logo">Doors County</div>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="quote.html" class="cta">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+      <label>
+        Full Name
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        Email Address
+        <input type="email" name="_replyto" required>
+      </label>
+      <label>
+        Phone Number
+        <input type="tel" name="phone">
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <h3>Find Us Here</h3>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.1234567890123!2d-90.1994046846897!3d38.62700217959073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8c0ec9b267e71%3A0xabcdef1234567890!2sSt.%20Louis%2C%20MO%2063101!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus"
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+</body>
+</html>

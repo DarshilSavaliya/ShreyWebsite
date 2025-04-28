@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Doors County – Get a Quote</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- HEADER + NAV -->
+  <header>
+    <div class="container">
+      <div class="logo">Doors County</div>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="quote.html" class="active cta">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container quote">
+    <h2>Request Your Free Quote</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="quote-form">
+      <label>
+        Full Name
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        Email Address
+        <input type="email" name="_replyto" required>
+      </label>
+      <label>
+        Phone Number
+        <input type="tel" name="phone">
+      </label>
+      <label>
+        Service Interested In
+        <select name="service">
+          <option>Window Installation</option>
+          <option>Door Fitting</option>
+          <option>Shutters</option>
+          <option>Repair & Maintenance</option>
+        </select>
+      </label>
+      <label>
+        Approx. Number of Units
+        <input type="number" name="quantity" min="1">
+      </label>
+      <label>
+        Additional Details
+        <textarea name="details" rows="4"></textarea>
+      </label>
+      <button type="submit">Submit Quote Request</button>
+    </form>
+  </section>
+</body>
+</html>

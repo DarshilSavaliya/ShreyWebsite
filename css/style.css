@@ -1,0 +1,511 @@
+
+
+}
+
+/* ---- resets & globals ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+a { text-decoration: none; }
+ul { list-style: none; margin: 0; padding: 0; }
+button, .btn, input[type=submit] {
+  background: #dac091;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---- container ---- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---- header ---- */
+header {
+  background: #3b4a6b;
+  color: #fff;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+.logo { font-size: 1.5rem; font-weight: bold; }
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  color: #fff;
+  border: none;
+  display: none;
+}
+nav ul { display: flex; gap: 1rem; }
+nav a { color: #fff; font-weight: 600; }
+.cta { background: #fff; color: #3b4a6b; padding: 0.5rem 1rem; border-radius: 4px; }
+
+/* ---- mobile nav ---- */
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  nav { display: none; width: 100%; }
+  nav.open { display: block; }
+  nav ul { flex-direction: column; gap: 0; }
+  nav li { margin: 0.5rem 0; text-align: center; }
+}
+
+/* ---- hero ---- */
+.hero { position: relative; }
+.hero img {
+  width: 100%; height: 60vh; object-fit: cover;
+}
+.hero .overlay {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; color: #fff;
+}
+
+/* ---- typography ---- */
+h1, h2, h3, h4 { margin: 0 0 1rem; }
+p { margin: 0 0 1.5rem; }
+
+/* ---- sections ---- */
+section { padding: 4rem 0; }
+.dark { background: #3b4a6b; color: #fff; }
+.gold { background: #dac091; }
+
+/* ---- grid systems ---- */
+.grid-2,
+.grid-3,
+.grid-4 {
+  display: grid;
+  gap: 1rem;
+}
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+/* ---- cards ---- */
+.card {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---- service-detail ---- */
+.service-detail .card img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---- featured ---- */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+.features .img-wrap {
+  flex: 1 1 300px;
+  height: 300px;
+  overflow: hidden;
+}
+.features .img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---- inline types list ---- */
+.types-inline {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.types-inline li { font-weight: 600; }
+
+/* ---- forms ---- */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+input, textarea, select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
+}
+
+/* ---- footer ---- */
+footer {
+  background: #3b4a6b;
+  color: #fff;
+  padding: 2rem 0 1rem;
+}
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.footer-info {
+  flex: 1 1 280px;
+}
+.map-wrap {
+  flex: 2 1 400px;
+  min-height: 250px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.copy {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ---- responsive tweaks ---- */
+@media (max-width: 600px) {
+  .hero img { height: 40vh; }
+  .footer-flex { flex-direction: column; }
+}
+
+
+/* ---- FAQ & Why Choose styles ---- */
+.why-choose h2,
+.faq h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.benefits {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.benefits li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+.faq-item {
+  margin-bottom: 1rem;
+}
+.faq-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/* ---- utility classes ---- */
+.center { text-align: center; }
+
+/* ---- generic image wrappers ---- */
+.img-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 66.666%; /* 3:2 aspect */
+  overflow: hidden;
+}
+.img-wrap img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---- large image wrapper for dream door ---- */
+.img-wrap-large {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect */
+  overflow: hidden;
+}
+.img-wrap-large img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ---- featured-projects ---- */
+.featured-projects h2 { text-align: center; margin-bottom: 1rem; }
+.featured-projects .card p { font-size: 0.9rem; }
+
+/* ---- testimonials ---- */
+.testimonials { background: #f9f9f9; padding: 4rem 0; }
+.testimonials h2 { text-align: center; margin-bottom: 2rem; }
+.testimonials .testimonial-card {
+  background: #fff; padding: 1.5rem; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.testimonials .testimonial-card p { font-style: italic; }
+.testimonials h5 { margin-top: 1rem; text-align: right; color: #555; }
+
+/* ---- about-hero ---- */
+.about-hero { position: relative; text-align: center; }
+.about-hero img { width: 100%; height: 40vh; object-fit: cover; }
+.about-hero .overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;
+}
+.about-hero h1 { color: #fff; font-size: 2.5rem; }
+
+/* ---- mission-vision ---- */
+.mission-vision .grid-2 { gap: 2rem; align-items: start; }
+.mission-vision h3 { margin-bottom: 0.5rem; }
+
+/* ---- history-timeline ---- */
+.history-timeline h3 { text-align: center; margin-bottom: 1rem; }
+.history-timeline ul { max-width: 600px; margin: 0 auto; padding-left: 1rem; }
+.history-timeline li { margin-bottom: 0.5rem; }
+
+
+
+/* Projects image wrappers */
+.projects .card .img-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 66.666%; /* 3:2 ratio */
+  overflow: hidden;
+}
+.projects .card .img-wrap img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ---- Services Preview Text ---- */
+.services-preview .card h3 {
+  color: #3b4a6b;
+  margin-top: 0.5rem;
+}
+.services-preview .card p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* ---- Feature Projects Image Wrappers ---- */
+.featured-projects .card .img-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 66.666%;
+  overflow: hidden;
+}
+.featured-projects .card .img-wrap img {
+  position: absolute; top:0; left:0;
+  width:100%; height:100%; object-fit:cover;
+}
+
+/* ---- Window Types Cards ---- */
+.window-types {
+  gap: 2rem;
+}
+.type-card {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 4px;
+}
+.type-card h3 {
+  margin-bottom: 0.5rem;
+  color: #3b4a6b;
+}
+.type-card ul {
+  list-style: none;
+  padding: 0;
+}
+.type-card li {
+  margin-bottom: 0.25rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+.type-card li:before {
+  content: "➤";
+  position: absolute;
+  left: 0;
+  color: #dac091;
+}
+
+/* ---- FAQ & Why Choose Icons ---- */
+.benefits li:before {
+  content: "✅";
+  margin-right: 0.5rem;
+}
+.faq-item h3:before {
+  content: "❓";
+  margin-right: 0.5rem;
+}
+
+/* ---- Footer Enhancements ---- */
+.newsletter {
+  margin-top: 1rem;
+}
+.newsletter h3 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.newsletter form {
+  display: flex;
+  gap: 0.5rem;
+}
+.newsletter input[type="email"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+}
+.newsletter button {
+  padding: 0.5rem 1rem;
+  background: #dac091;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ---- Projects Page Image Wrappers ---- */
+.projects .card .img-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 66.666%;
+  overflow: hidden;
+}
+.projects .card .img-wrap img {
+  position: absolute; top:0; left:0;
+  width:100%; height:100%; object-fit:cover;
+}
+
+
+/* Featured Projects image wrapper override */
+.featured-projects .card .img-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+  border-radius: 4px;
+}
+.featured-projects .card .img-wrap img {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+/* Window Types wrapper */
+.window-types-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.features-wrapper .window-types {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+/* Page Hero */
+.page-hero {
+  position: relative;
+  text-align: center;
+}
+.page-hero img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+.page-hero .overlay {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex; align-items: center; justify-content: center;
+}
+.page-hero h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* Projects intro */
+.projects-intro p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* How It Works */
+.how-it-works {
+  padding: 4rem 0;
+}
+.how-it-works h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.how-it-works .step {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 4px;
+}
+.how-it-works .step h3 {
+  margin-top: 0;
+}
+.how-it-works .step p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* ---- Homepage Projects Grid Override ---- */
+.homepage-projects .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.homepage-projects .card {
+  display: flex;
+  flex-direction: column;
+}
+.homepage-projects .card .img-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+.homepage-projects .card .img-wrap img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* break to 2 columns at tablet */
+@media (max-width: 992px) {
+  .homepage-projects .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* break to 1 column on mobile */
+@media (max-width: 768px) {
+  .homepage-projects .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
